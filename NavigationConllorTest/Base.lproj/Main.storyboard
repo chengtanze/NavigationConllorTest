@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FZ7-HR-AyI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fmN-FY-iAk">
+            <objects>
+                <navigationController id="FZ7-HR-AyI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="auu-O6-KSh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Oj-n1-2rL" kind="relationship" relationship="rootViewController" id="D3d-N7-T6U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3F1-z1-PEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="371"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oqc-AJ-wyl">
+            <objects>
+                <viewController id="5Oj-n1-2rL" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8sF-ig-cyg"/>
+                        <viewControllerLayoutGuide type="bottom" id="9hW-3I-06n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N83-rA-86k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMC-gj-dEz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="264" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="NextView:" destination="5Oj-n1-2rL" eventType="touchUpInside" id="jZc-uI-2eu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49083291330645162" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cMC-gj-dEz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cMC-gj-dEz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="UIa-2v-ylW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Dzg-S2-iEV">
+                            <connections>
+                                <segue destination="xrq-Mq-2Xh" kind="push" id="cM3-qI-QC2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0d-CK-oqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5" y="371"/>
+        </scene>
+        <!--Navi View Controller-->
+        <scene sceneID="2fj-Ol-Fng">
+            <objects>
+                <viewController id="xrq-Mq-2Xh" customClass="NaviViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MA2-pi-CL8"/>
+                        <viewControllerLayoutGuide type="bottom" id="WBh-bp-9aj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cSB-F5-ubn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-Qa-3KE">
+                                <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="299" width="150" height="2"/>
+                                </variation>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1J8-Qa-3KE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1J8-Qa-3KE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="v68-hx-a7R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOV-4b-uch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933.5" y="371"/>
+        </scene>
+    </scenes>
+</document>
